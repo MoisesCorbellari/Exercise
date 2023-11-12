@@ -35,5 +35,5 @@ print('{:_^60}'.format(' Programa Finalizado! '))
 
 print(f'Total gasto: R${tot:.2f}')
 print(f'Quantos produtos custam mais de R$1000? {maior_mil}')
-print(f'Qual o produto mais caro? {caro}, e seu valor é de R${produto}')
+print(f'Qual o produto mais caro? {caro}, e seu valor é de R${produto:.2f}')
 print(f'Qual o produto mais barato? {prod_barato}, e seu valor é de R${menos:.2f}')
