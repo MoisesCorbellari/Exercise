@@ -45,7 +45,7 @@ while True:
         tot += 1
     else:
         if tot > 0:
-            print(f'São {tot} cédulas de R${ced}')
+            print(f'{tot} cédulas de R${ced}')
         if ced == 50:
             ced = 20
         elif ced == 20:
