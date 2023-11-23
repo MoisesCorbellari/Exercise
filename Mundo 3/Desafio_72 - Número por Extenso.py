@@ -11,4 +11,4 @@ while True:
         break
     else:
         print('Valor inválido.', end=' ')
-print(f'O número digitado foi: {val[numb]}.'.title())
+print(f'O número digitado foi: {val[numb]}.')
