@@ -1,5 +1,5 @@
-'''Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. 
-No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista.'''
+''' Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. 
+No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista. '''
 valor = []
 for p in range (5):
     pos = int(input(f'Digite o {p + 1}º valor: '))
