@@ -14,11 +14,12 @@ while True:
         vNum.append(num)
     except ValueError:
         print('Digite um número válido!')
+print('='*60)
 qDig = len(vNum)
 print(f'A) Quantos números foram digitados? {qDig}')
 vNum.sort(reverse=True)
 print(f'\nB) A lista de valores, ordenada de forma decrescente: {vNum}\n')
 if 5 in vNum:
-    print('C) O valor 5 está na lista? Sim.')
+    print('C) O valor 5 está na lista? Sim.\n')
 else:
-    print('C) O valor 5 está na lista? Não.')
+    print('C) O valor 5 está na lista? Não.\n')
