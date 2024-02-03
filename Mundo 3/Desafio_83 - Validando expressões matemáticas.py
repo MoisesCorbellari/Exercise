@@ -2,11 +2,17 @@
 Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. 
 Seu aplicativo deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
 '''
-parent = []
-exp = input('Digite uma expressão algébrica: ').strip().lower()
+parnt = []
+exp = str(input('Digite uma expressão qualquer: ')).strip().lower()
 for simb in exp:
     if simb == '(':
-        parent.append(simb)
+        parnt.append(simb)
     elif simb == ')':
-        parent.pop() if len(parent) > 0 else parent.append(')')
-print('Expressão válida!' if len(parent) == 0 else 'Expressão inválida!')
+        if len(parnt) > 0:
+            parnt.pop()  
+    else: 
+        parnt.append(')')
+if len(parnt) == 0:
+    print('Expressão válida!')  
+else: 
+    print('Expressão inválida!')
