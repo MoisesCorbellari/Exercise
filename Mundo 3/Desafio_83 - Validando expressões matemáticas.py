@@ -10,8 +10,8 @@ for simb in exp:
     elif simb == ')':
         if len(parnt) > 0:
             parnt.pop()  
-    else: 
-        parnt.append(')')
+        else: 
+            parnt.append(simb)
 if len(parnt) == 0:
     print('Expressão válida!')  
 else: 
