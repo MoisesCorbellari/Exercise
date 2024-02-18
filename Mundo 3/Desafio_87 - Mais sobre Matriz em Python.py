@@ -6,9 +6,7 @@ C) O maior valor da segunda linha.
 '''
 
 matriz = []
-somaPar = 0
-terceiraColuna = 0
-mSegundaLinha = float('-inf')
+somaPar = terceiraColuna = mSegundaLinha = 0
 for l in range(3):
     linha = []
     for c in range(3):
