@@ -8,7 +8,7 @@ from rich.progress import Progress
 
 palpites = []
 print('_'*40 + f'\n{"MEGA SENA":^35}\n' + '_'*40)
-qtjogos = int(input('\nQuantos jogos é para fazer? '))
+qtjogos = int(input('\nInforme a quantidade de jogos: '))
 with Progress() as progress:
     task = progress.add_task("[white]Gerando jogos...", total=qtjogos)
     print()
