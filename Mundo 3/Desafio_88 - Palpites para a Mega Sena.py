@@ -25,8 +25,8 @@ with Progress() as progress:
         jogo.sort()
         palpites.append(jogo)
         progress.update(task, advance=1)
-        sleep(.8)
+        sleep(0.2)
         print(f'Jogo {c+1}: {palpites[c]}')
-        sleep(.7)
+        sleep(1)
     
     print('\n' + f'{"  BOM JOGO  ":^35}' + '\n')
