@@ -14,31 +14,24 @@ while True:
     aluno = {'Nome':nome,'Nota1':n1,'Nota2':n2,'Média':media}
     boletim.append(aluno)
     rsp = str(input('Continuar? [S/N]')).strip().upper()[0]
-    if rsp == 'N':
+    if rsp != 'S':
         break
     print('-='*30)
-    print('\n\nBoletim das Notas:')
-    for aluno in boletim:
-        print(f'Nome: {aluno["Nome"]}')
-        print(f'Nota 1: {aluno["Nota1"]}')
-        print(f'Nota 2: {aluno["Nota2"]}')
-        print(f'Média: {aluno["Média"]}')
-        print('-'*60)
-print('\n\nBoletim Final:')
+print('\n\nBoletim:')
 for aluno in boletim:
-        print(f'Nome: {aluno["Nome"]}:')
-        print(f'Nota 1: {aluno["Nota1"]}')
-        print(f'Nota 2: {aluno["Nota2"]}')
-        print(f'Média: {aluno["Média"]}')
-        print('-'*60)
+        print(f'Nome: {aluno["Nome"]}')
+        print(f'Média: {aluno["Média"]}\n')
+
+print('-'*60)
+
 while True:
-    rsp2 = input('Deseja ver as notas de algum aluno ?[S/N]:').strip().upper()
+    rsp2 = input('\nDeseja ver as notas de algum aluno ?[S/N]:').strip().upper()
     if rsp2 == 'S':
         nome2 = input('Digite o Nome do Aluno: ')
         aluno_encontrado = False  
         for p in boletim:
             if p['Nome'] == nome2:
-                print(f'Notas de {p["Nome"]}:')
+                print(f'\nBoletim do(a) aluno(a){p["Nome"]}:')
                 print(f'Nota 1: {p["Nota1"]}')
                 print(f'Nota 2: {p["Nota2"]}')
                 print(f'Média: {p["Média"]}')
