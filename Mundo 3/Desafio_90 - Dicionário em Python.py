@@ -4,7 +4,7 @@ No final, mostre o conteúdo da estrutura na tela.'''
 
 alunos = {}
 while True:
-    nome = input('Digite o nome do aluno (ou digite "sair" para encerrar o programa): ')
+    nome = input('Digite o nome do aluno (ou digite "sair" para encerrar o programa): ').capitalize()
     if nome.lower() == 'sair':
         break
     media = float(input('Informe a média do aluno: '))
