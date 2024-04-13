@@ -21,3 +21,4 @@ for k, v in funcionario.items():
             print('Não tem carteira de trabalho.')
     else:
         print(f'{k}: {v}')
+print()
