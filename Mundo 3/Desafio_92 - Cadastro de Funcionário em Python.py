@@ -10,7 +10,7 @@ funcionario['Nome'] = str(input('Informe o nome: ')).capitalize().strip()
 nascimento = int(input('Informe o ano de nascimento: '))
 funcionario['Idade'] = ano_atual - nascimento
 funcionario['ctps'] = int(input('Número da CTPS (caso não tenha, digite 0): '))
-if funcionario['ctps'] > 0:
+if funcionario['ctps'] != 0:
     funcionario['Contratação'] = int(input('Informe o ano de contratação: '))
     funcionario['Salário'] = float(input('Salário: R$'))
     funcionario['Aposentadoria (em anos)'] = funcionario['Idade'] + ((funcionario['Contratação'] + 35) - datetime.now().year)
