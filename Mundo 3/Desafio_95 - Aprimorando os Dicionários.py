@@ -24,12 +24,12 @@ while True:
         print('ERRO! Responda apenas S ou N.')
     if resp == 'N':
         break
-print('-='*50)
+print('-='*30)
 print(f'{"id":<5}{"nome":<15}{"gols":<25}{"total":<10}')
-print('-='*50)
+print('-'*60)
 for k, v in enumerate(time):
     print(f'{k:<5}{v["nome"]:<15}{str(v["gols"]):<25}{v["total"]:<10}')
-print('-='*50)
+print('-='*45)
 while True:
     info = int(input('Digite o "id" para mostrar os dados (para sair, digite 999, e pressione "enter"): '))
     if info == 999:
@@ -39,8 +39,8 @@ while True:
     if info >= len(time):
         print(f'ERRO! Não existe jogador com id {info}.')
     else:
-        print('-='*50)
+        print('-='*45)
         print(f'{"INFORMAÇÕES DO JOGADOR - " + time[info]["nome"]:^40}\n')
         for i, g in enumerate(time[info]['gols']):
             print(f'      No {i+1}º jogo {time[info]["nome"]} fez {g} gols.')
-    print('-='*50)
+    print('-='*45)
