@@ -3,13 +3,13 @@ que receba as dimensões de um terreno retangular
 (largura e comprimento) e mostre a área do terreno.'''
 
 def mensagem(msg):
-    tm = len(msg) + 25
-    print(f'{msg:>25}')
+    tm = len(msg) + 40
+    print(f'{msg:>30}')
     print('-'*tm)
 
 def area(l, c):
     calc = l*c
-    print(f'\nAs dimensões de um terreno {l}x{c} é de {calc:.2f}m².')
+    print(f'\nAs dimensões do terreno de {l} x {c} é de {calc:.2f}m².')
 
 mensagem('Cálculo de área')
 larg = float(input('Digite a largura do terreno (m): '))
