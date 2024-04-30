@@ -35,13 +35,7 @@ cont(1,10,1)
 cont(10,0,2)
 print('Personalize a contagem!')
 inicio = int(input('Início: '))
-fim = inicio
-while fim <= inicio:
-    fim = int(input('Fim: '))
-    if inicio < fim:
-        print('Inicio não pode ser menor que fim!')
-    else:
-        break
+fim = int(input('Fim: '))
 passo = int(input('Passo: '))
 if passo == 0:
     passo = 1
