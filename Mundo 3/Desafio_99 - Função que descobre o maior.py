@@ -36,7 +36,7 @@ def maior(*num):
 #main program
 msg('Descorindo o maior número!')
 n = int(input('Defina a quantidade de parâmetros para análise: '))
-for _ in range(0,n):
+for _ in range(n):
     maior(
         randint(0, 100), randint(0, 100), 
         randint(0, 100), randint(0, 100),
