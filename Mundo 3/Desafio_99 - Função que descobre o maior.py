@@ -17,7 +17,7 @@ def msg(txt):
 def maior(*num):
     cont = maior = 0
     print('''
-                Analisando os parâmetros...
+                Analisando os parâmetros ...
           ''')
     sleep(1)
     for valor in num:
