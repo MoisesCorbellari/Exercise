@@ -1,2 +1,2 @@
 # Desafios
-## Neste repositório estão exercícios feitos em python para acompanhar meu aprendizado.
+## Neste repositório estão testes de idéias para exercícios feitos em python para acompanhar meu aprendizado.
