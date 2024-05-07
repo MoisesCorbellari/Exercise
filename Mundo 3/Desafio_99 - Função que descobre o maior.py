@@ -21,7 +21,7 @@ def maior(*num):
           ''')
     sleep(1)
     for valor in num:
-        sleep(1)
+        sleep(0.6)
         print(f'{valor}', end=' ')
         if cont == 0:
             maior = valor
@@ -29,8 +29,9 @@ def maior(*num):
             if valor > maior:
                 maior = valor
         cont += 1
+    sleep(1)
     print(f'\nForam analisados {cont} valores.')
-    print(f'O maior valor informado é: {maior}')
+    print(f'O maior valor informado foi {maior}')
     linha()
 
 #main program
