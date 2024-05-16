@@ -21,6 +21,6 @@ def soma_par(lista):
             soma += i
     print(f'\nResultado da soma dos pares {lista}: {soma}\n')
 
-nums = []
+nums = list()
 sortear(nums)
 soma_par(nums)
