@@ -20,24 +20,25 @@ def voto(ano):
     idade = date.today().year - ano
 
     if 16 <= idade < 18 or idade > 65:
-        return f'{idade} anos: voto OPCIONAL.'
+        return f' com {idade} anos seu voto é OPCIONAL.'
     elif idade < 16:
-        return f'{idade} anos: voto NEGADO.'
+        return f'com {idade} anos você não está HABILITADO(A) para votar.'
     else:
-        return f'{idade} anos: voto OBRIGATÓRIO.'
+        return f'com {idade} anos seu voto é OBRIGATÓRIO.'
 # main program
 title('SISTEMA DE VERIFICAÇÃO DE VOTO')
 
 while True:
-    ano = int(input('\nAno de nascimento: '))
+    nome = str(input('\nInforme seu nome: ')).strip().capitalize()
+    ano = int(input('Ano de nascimento: '))
     with MoonSpinner('Processando informação ... ') as bar:
         for i in range(100):
             sleep(0.02)
             bar.next()
-    print(voto(ano))
-    resp = input('\nDeseja continuar? [S/N] ').strip().upper()[0]
+    print(f'\n{nome}, {voto(ano)}')
+    resp = input('\nDeseja sair? ("S" para sim, e "N" para não.): ').strip().upper()[0]
     linha()
-    if resp == 'N':
-        print('Encerrando ...')
+    if resp == 'S':
+        print('Volte sempre! ...')
         sleep(1)
         break
