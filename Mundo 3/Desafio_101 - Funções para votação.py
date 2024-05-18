@@ -29,12 +29,23 @@ def voto(ano):
 title('SISTEMA DE VERIFICAÇÃO DE VOTO')
 
 while True:
-    nome = str(input('\nInforme seu nome: ')).strip().capitalize()
-    ano = int(input('Ano de nascimento: '))
+    nome = input('\nInforme seu nome: ').strip().capitalize()
+    while True:
+        try:
+            ano = int(input('Ano de nascimento: '))
+            ano_atual = date.today().year
+            if ano > ano_atual or ano < 1900:
+                print('\nAno inválido. Tente novamente.\n')
+                continue
+            break
+        except ValueError:
+            print('\nEntrada inválida. Tente novamente.\n')
+            
     with MoonSpinner('Processando informação ... ') as bar:
-        for i in range(100):
-            sleep(0.02)
+        for _ in range(50):
+            sleep(0.04)
             bar.next()
+
     print(f'\n{nome}, {voto(ano)}')
     resp = input('\nDeseja sair? ("S" para sim, e "N" para não.): ').strip().upper()[0]
     linha()
