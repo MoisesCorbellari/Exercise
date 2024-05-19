@@ -50,6 +50,6 @@ while True:
     resp = input('\nDeseja sair? ("S" para sim, e "N" para não.): ').strip().upper()[0]
     linha()
     if resp == 'S':
-        print('Volte sempre! ...')
+        print(f'\n{'Volte sempre! ...':>40}\n')
         sleep(1)
         break
