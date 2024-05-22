@@ -28,9 +28,6 @@ def fatorial(n, show=False):
     return f
 title('Cálculo de Fatorial')
 while True:
-    ''' O programa solicita a entrada do usuário,
-        ao passo que calcula o fatorial de acordo
-        com a escolha do usuário. '''
     try:
         num = int(input('\nDigite um valor: '))
     except ValueError:
