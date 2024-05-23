@@ -16,6 +16,12 @@ def linha():
     print('-'*70)
 
 def fatorial(n, show=False):
+    """
+    Calculando fatorial de um número.
+    parametro n: O número a ser calculado.
+    parametro show: (opcional) Mostrar ou não a conta.
+    return: O valor do fatorial de um número n.
+    """
     f = math.factorial(n)
     if show:
         print(f'Resultado de {n}! -> ', end='')
@@ -27,6 +33,7 @@ def fatorial(n, show=False):
                 print(' = ', end='')
     return f
 title('Cálculo de Fatorial')
+help(fatorial)
 while True:
     try:
         num = int(input('\nDigite um valor: '))
