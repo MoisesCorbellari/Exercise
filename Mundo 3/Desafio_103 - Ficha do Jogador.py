@@ -18,9 +18,8 @@ def line():
         print('-'*70)
 
 def title(txt):
-    msg = len(txt) + 50
+    len(txt) + 50
     print(f'{txt:>40}')
-    print('-'*msg)
 
 def ficha(nome='Desconhecido', gols=0):
         """
@@ -44,11 +43,11 @@ def ficha(nome='Desconhecido', gols=0):
                  - Pergunta ao usuário se deseja continuar (S/N).
                 3 Exibe um spinner de carregamento, após a saída do loop.
                 4 A função "limpar" é executada e exibe a ficha de todos os jogadores cadastrados.
-        Libs usadas:
+        Bibliotecas usadas:
                 - time: executar pausas por breves intervalos.
-                - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das infos.
+                - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das informações.
                 - os: para executar comandos do sistema operacional
-                - tabulate: gera uma tabela com as informações inseridas
+                - tabulate: para gerar uma tabela com as informações inseridas
         """
         
         print(f'\nCadastro Realizado com sucesso.\nNome: {nome} \nGols: {gols}')
@@ -56,7 +55,7 @@ def ficha(nome='Desconhecido', gols=0):
 jogadores = list()
 count_id = 1
 
-title('Cadastro do Jogador')
+title('Cadastro do Jogador\n')
 
 while True:
         jogador = dict()
@@ -89,11 +88,13 @@ while True:
                         break
                 print('ERRO! Digite S ou N !')
         if resp == 'N':
-                with MoonSpinner('Carregando às informações ... ') as bar:
+                with MoonSpinner('Carregando tabela ... ') as bar:
                         for _ in range(50):
                                 sleep(0.04)
                                 bar.next()
                 break
+        limpar()
+        
 limpar()
-title('Ficha dos Jogadores')
-print(tabulate(jogadores, headers='keys', tablefmt='fancy_grid'))
+title('Ficha dos Jogadores\n')
+print(tabulate(jogadores, headers='keys', tablefmt='rounded_grid'))
