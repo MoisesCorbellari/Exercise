@@ -9,6 +9,7 @@ mesmo que algum dado não tenha sido informado corretamente.
 from time import sleep
 from progress.spinner import MoonSpinner
 import os
+from tabulate import tabulate
 
 def limpar():
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -47,6 +48,7 @@ def ficha(nome='Desconhecido', gols=0):
                 - time: executar pausas por breves intervalos.
                 - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das infos.
                 - os: para executar comandos do sistema operacional
+                - tabulate: gera uma tabela com as informações inseridas
         """
         
         print(f'\nCadastro Realizado com sucesso.\nNome: {nome} \nGols: {gols}')
@@ -94,6 +96,4 @@ while True:
                 break
 limpar()
 title('Ficha dos Jogadores')
-print(f'{"id":<5}{"Nome":<15}{"Gols":<25}')
-for jogador in jogadores:
-        print(f'{jogador["id"]:<5}{jogador["Nome"]:<15}{jogador["Gols"]:<25}')
+print(tabulate(jogadores, headers='keys', tablefmt='fancy_grid'))
