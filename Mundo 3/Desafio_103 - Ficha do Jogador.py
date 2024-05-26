@@ -28,10 +28,11 @@ def ficha(nome='Desconhecido', gols=0):
         Após o termino do cadastro, é exibida uma lista de todos os jogadores e suas informações.
 
         Funções:
-                - limpar(): limpa a tela do console após a finalização do programa.
-                - line(): imprime uma linha de separação com 70 caracteres.
-                - title(txt): imprime um titulo centralizado com uma linha de separação.
-                - ficha(nome='Desconhecido', gols=0): função que recebe dois parâmetros opcionais.
+                 - limpar(): limpa a tela do console após a finalização do programa.
+                 - line(): imprime uma linha de separação com 70 caracteres.
+                 - title(txt): imprime um titulo centralizado.
+                 - ficha(nome='Desconhecido', gols=0): função que recebe dois parâmetros opcionais.
+
         Programa principal:
                 1 Exibe o título "Cadastro do Jogador".
                 2 Inicia o loop para cadastro de jogadores:
@@ -43,11 +44,12 @@ def ficha(nome='Desconhecido', gols=0):
                  - Pergunta ao usuário se deseja continuar (S/N).
                 3 Exibe um spinner de carregamento, após a saída do loop.
                 4 A função "limpar" é executada e exibe a ficha de todos os jogadores cadastrados.
+
         Bibliotecas usadas:
-                - time: executar pausas por breves intervalos.
-                - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das informações.
-                - os: para executar comandos do sistema operacional
-                - tabulate: para gerar uma tabela com as informações inseridas
+                 - time: para executar pausas por breves intervalos.
+                 - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das informações.
+                 - os: para executar comandos do sistema operacional
+                 - tabulate: para gerar uma tabela com as informações inseridas
         """
         
         print(f'\nCadastro Realizado com sucesso.\nNome: {nome} \nGols: {gols}')
