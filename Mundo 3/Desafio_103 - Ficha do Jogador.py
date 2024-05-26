@@ -37,7 +37,7 @@ def ficha(nome='Desconhecido', gols=0):
                 1 Exibe o título "Cadastro do Jogador".
                 2 Inicia o loop para cadastro de jogadores:
                  - Solicita o nome do jogador e os gols marcados.
-                 - Caso o nome e gols do jogador não for fornecidos, atribui "Desconhecido" e 0.
+                 - Caso o nome e gols do jogador não forem fornecidos, atribui "Desconhecido" e 0.
                  - Valida se os gols marcados é um numero inteiro.
                  - Adiciona o jogador à lista de jogadores.
                  - Exibe a ficha do jogador cadastrado.
@@ -47,7 +47,7 @@ def ficha(nome='Desconhecido', gols=0):
 
         Bibliotecas usadas:
                  - time: para executar pausas por breves intervalos.
-                 - progress.spinner: exibe um spinner de carregamento, simulando o carregamento das informações.
+                 - progress.spinner: para exibir um spinner de carregamento, simulando o carregamento das informações.
                  - os: para executar comandos do sistema operacional
                  - tabulate: para gerar uma tabela com as informações inseridas
         """
