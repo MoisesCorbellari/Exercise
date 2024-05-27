@@ -28,26 +28,26 @@ def ficha(nome='Desconhecido', gols=0):
         Após o termino do cadastro, é exibida uma lista de todos os jogadores e suas informações.
 
         Funções:
-                 - limpar(): limpa a tela do console após a finalização do programa.
-                 - line(): imprime uma linha de separação com 70 caracteres.
-                 - title(txt): imprime um titulo centralizado.
-                 - ficha(nome='Desconhecido', gols=0): função que recebe dois parâmetros opcionais.
+                 - limpar(): para limpar a tela do console
+                 - line(): imprime uma linha de separação com 70 caracteres
+                 - title(txt): imprime um titulo centralizado
+                 - ficha(nome='Desconhecido', gols=0): recebe e exibe a ficha com parâmetros opcionais
 
         Programa principal:
-                1 Exibe o título "Cadastro do Jogador".
+                1 Exibe o título "Cadastro do Jogador"
                 2 Inicia o loop para cadastro de jogadores:
-                 - Solicita o nome do jogador e os gols marcados.
-                 - Caso o nome e gols do jogador não forem fornecidos, atribui "Desconhecido" e 0.
-                 - Valida se os gols marcados é um numero inteiro.
-                 - Adiciona o jogador à lista de jogadores.
-                 - Exibe a ficha do jogador cadastrado.
-                 - Pergunta ao usuário se deseja continuar (S/N).
-                3 Exibe um spinner de carregamento, após a saída do loop.
-                4 A função "limpar" é executada e exibe a ficha de todos os jogadores cadastrados.
+                 - Solicita o nome do jogador e os gols marcados
+                 - Caso o nome e gols do jogador não forem fornecidos, atribui "Desconhecido" e 0
+                 - Valida se os gols marcados é um numero inteiro
+                 - Adiciona o jogador à lista de jogadores
+                 - Exibe a ficha do jogador cadastrado
+                 - Pergunta ao usuário se deseja continuar (S/N)
+                3 Exibe um spinner de carregamento, após a saída do loop
+                4 A função "limpar" é executada e exibe a ficha de todos os jogadores cadastrados
 
         Bibliotecas usadas:
-                 - time: para executar pausas por breves intervalos.
-                 - progress.spinner: para exibir um spinner de carregamento, simulando o carregamento das informações.
+                 - time: para executar pausas por breves intervalos
+                 - progress.spinner: para exibir um spinner de carregamento, simulando o carregamento das informações
                  - os: para executar comandos do sistema operacional
                  - tabulate: para gerar uma tabela com as informações inseridas
         """
@@ -100,7 +100,7 @@ while True:
 limpar()
 title('Ficha dos Jogadores\n')
 print(tabulate(jogadores, 
-               headers='keys', # analisa cada dicionário na lista e identifica as chaves
+               headers='keys', # usa as chaves do dicionário como cabeçalhos da tabela
                tablefmt='rounded_grid', # define o formato da tabela
                stralign="center" # centraliza o conteúdo das células
                ))
