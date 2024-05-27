@@ -99,4 +99,8 @@ while True:
         
 limpar()
 title('Ficha dos Jogadores\n')
-print(tabulate(jogadores, headers='keys', tablefmt='rounded_grid'))
+print(tabulate(jogadores, 
+               headers='keys', # analisa cada dicionário na lista e identifica as chaves
+               tablefmt='rounded_grid', # define o formato da tabela
+               stralign="center" # centraliza o conteúdo das células
+               ))
