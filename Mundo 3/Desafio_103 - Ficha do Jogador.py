@@ -13,17 +13,18 @@ from tabulate import tabulate
 
 def limpar():
         os.system('cls' if os.name == 'nt' else 'clear')
-        
-def line():
+
+def linha():
         print('-'*70)
 
-def title(txt):
-    len(txt) + 50
-    print(f'{txt:>40}')
+def titulo(txt):
+    print(f'{txt:^70}')
 
 def ficha(nome='Desconhecido', gols=0):
-        """
-        O programa permite o cadastro de jogadores de futebol, resgistrando seus nomes e gols marcados.
+        print(f'\nCadastro Realizado com sucesso.\nNome: {nome} \nGols: {gols}')
+
+def main():
+        """  O programa permite o cadastro de jogadores de futebol, resgistrando seus nomes e gols marcados.
         São armazenados em uma lista de dicionários, e o usuário pode continuar cadastradando até decidir parar.
         Após o termino do cadastro, é exibida uma lista de todos os jogadores e suas informações.
 
@@ -32,6 +33,8 @@ def ficha(nome='Desconhecido', gols=0):
                  - line(): imprime uma linha de separação com 70 caracteres
                  - title(txt): imprime um titulo centralizado
                  - ficha(nome='Desconhecido', gols=0): recebe e exibe a ficha com parâmetros opcionais
+                 - main(): contém o fluxo principal do programa, que inclui:
+                        lógica de cadastro, exibição das fichas e manipulação da lista de jogadores.
 
         Programa principal:
                 1 Exibe o título "Cadastro do Jogador"
@@ -49,58 +52,56 @@ def ficha(nome='Desconhecido', gols=0):
                  - time: para executar pausas por breves intervalos
                  - progress.spinner: para exibir um spinner de carregamento, simulando o carregamento das informações
                  - os: para executar comandos do sistema operacional
-                 - tabulate: para gerar uma tabela com as informações inseridas
-        """
-        
-        print(f'\nCadastro Realizado com sucesso.\nNome: {nome} \nGols: {gols}')
+                 - tabulate: para gerar uma tabela com as informações inseridas  """
+        jogadores = list()
+        count_id = 1
 
-jogadores = list()
-count_id = 1
-
-title('Cadastro do Jogador\n')
-
-while True:
-        jogador = dict()
-        jogador['id'] = count_id
-        jogador['Nome'] = input('Nome do jogador: ').capitalize().strip()
-        jogador['Gols'] = input(f'Quantos gols {jogador["Nome"]} marcou: ').strip()
-
-        if jogador['Nome'] == '':
-                jogador['Nome'] = 'Desconhecido'
-        if jogador['Gols'] == '':
-                jogador['Gols'] = 0
+        titulo('Cadastro do Jogador\n')
 
         while True:
-                try:
-                        jogador['Gols'] = int(jogador['Gols'])
-                        break
-                except ValueError:
-                        print('ERRO! Digite um número inteiro!')
-                        jogador['Gols'] = input(f'Quantos gols {jogador["Nome"]} marcou: ').strip()
-                        
-        jogadores.append(jogador)
-        ficha(jogador['Nome'], jogador['Gols'])
-        line()
-        count_id += 1
+                jogador = dict()
+                jogador['id'] = count_id
+                jogador['Nome'] = input('Nome do jogador: ').capitalize().strip()
+                jogador['Gols'] = input(f'Quantos gols {jogador["Nome"]} marcou: ').strip()
 
-        while True:
-                resp = input('Quer continuar? (S/N) ').strip().upper()
-                print()
-                if resp in 'SN':
+                if jogador['Nome'] == '':
+                        jogador['Nome'] = 'Desconhecido'
+                if jogador['Gols'] == '':
+                        jogador['Gols'] = 0
+
+                while True:
+                        try:
+                                jogador['Gols'] = int(jogador['Gols'])
+                                break
+                        except ValueError:
+                                print('ERRO! Digite um número inteiro!')
+                                jogador['Gols'] = input(f'Quantos gols {jogador["Nome"]} marcou: ').strip()
+                                
+                jogadores.append(jogador)
+                ficha(jogador['Nome'], jogador['Gols'])
+                linha()
+                count_id += 1
+
+                while True:
+                        resp = input('Quer continuar? (S/N) ').strip().upper()
+                        print()
+                        if resp in 'SN':
+                                break
+                        print('ERRO! Digite S ou N !')
+                if resp == 'N':
+                        with MoonSpinner('Carregando tabela ... ') as bar:
+                                for _ in range(50):
+                                        sleep(0.04)
+                                        bar.next()
                         break
-                print('ERRO! Digite S ou N !')
-        if resp == 'N':
-                with MoonSpinner('Carregando tabela ... ') as bar:
-                        for _ in range(50):
-                                sleep(0.04)
-                                bar.next()
-                break
+                limpar()
+                
         limpar()
-        
-limpar()
-title('Ficha dos Jogadores\n')
-print(tabulate(jogadores, 
-               headers='keys', # usa as chaves do dicionário como cabeçalhos da tabela
-               tablefmt='rounded_grid', # define o formato da tabela
-               stralign="center" # centraliza o conteúdo das células
-               ))
+        titulo('Ficha dos Jogadores\n')
+        print(tabulate(jogadores, 
+                headers='keys', # usa as chaves do dicionário como cabeçalhos da tabela
+                tablefmt='rounded_grid', # define o formato da tabela
+                stralign="center" # centraliza o conteúdo das células
+                ))
+if __name__ == '__main__': # essa linha garante que a função main() seja executada apenas quando o programa é executado diretamente
+        main()
