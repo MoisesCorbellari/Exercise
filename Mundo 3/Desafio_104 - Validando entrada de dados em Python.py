@@ -18,10 +18,17 @@ def leiaInt(prompt):
                 print('Valor inválido. Digite um número inteiro positivo.\n')
         except ValueError:
             print('ERRO! Digite um número inteiro válido.\n')
+titulo('Validando entrada de dados em Python\n')
 def main():
-    titulo('Validando entrada de dados em Python\n')
-    num = leiaInt('Digite um valor: ')
-    print(f'Você digitou o número {num}')
+    while True:
+        num = leiaInt('Digite um valor: ')
+        print(f'Você digitou o número {num}\n')
+        resp = input('Continuar [S/N]? ').upper()
+        print()
+        if resp == 'S':
+            main()
+        else:
+            print('Fim!')
 
 if __name__ == '__main__':
     main()
