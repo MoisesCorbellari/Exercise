@@ -10,25 +10,27 @@ def titulo(msg):
 
 def leiaInt(prompt):
     while True:
-        try:
-            n = int(input(prompt))
-            if n >= 0:
-                return n
-            else:
-                print('Valor inválido. Digite um número inteiro positivo.\n')
-        except ValueError:
-            print('ERRO! Digite um número inteiro válido.\n')
+        n = str(input(prompt))
+        if n.lstrip('-').isdigit():
+            return int(n)
+        else:
+            print('\033[0;31mERRO! Digite um número válido.\033[m\n')
+
 titulo('Validando entrada de dados em Python\n')
+
 def main():
     while True:
         num = leiaInt('Digite um valor: ')
         print(f'Você digitou o número {num}\n')
-        resp = input('Continuar [S/N]? ').upper()
-        print()
-        if resp == 'S':
-            main()
-        else:
-            print('Fim!')
+        while True:
+            resp = input('Continuar [S/N]? ').upper()
+            if resp in 'SN':
+                break
+            else:
+                print('\033[0;31mERRO! Digite S ou N !\033[m\n')
+        if resp == 'N':
+            break
+    titulo('Fim!')
 
 if __name__ == '__main__':
     main()
