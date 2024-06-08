@@ -51,7 +51,7 @@ def coletar():
             nota = float(nota)
             nota_list.append(nota)
         except ValueError:
-            print('Dado inválido! Digite novamente!')
+            print('\033[0;31mDado inválido! Digite novamente!\033[m\n')
             continue
         
         while True:
