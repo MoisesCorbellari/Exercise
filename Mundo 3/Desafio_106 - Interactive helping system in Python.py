@@ -20,10 +20,10 @@ c = (
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def title(msg, cor=0):
-    tmh = len(msg) + 4
+def title(txt, cor=0):
+    tmh = len(txt) + 4
     print(c[cor], end='')
-    print(f'\n            {msg.center(tmh, " ")}\n')
+    print(f'\n            {txt.center(tmh, " ")}\n')
     print(c[7], end='')
     sleep(1)
 clear()
