@@ -28,7 +28,7 @@ def title(txt, cor=0):
     sleep(1)
 clear()
 def helpDesk(comm):
-    title(f'Acessando o manual do comando \'{comm}\'', 5)
+    title(f'Acessando o manual do comando \' {comm} \'', 5)
     print(c[3], end='')
     help(comm)
     print(c[4], end='')
