@@ -40,4 +40,4 @@ while True:
         break
     else:
         helpDesk(cmd)
-title('Até breve', 5)
+title('Até breve!', 5)
