@@ -8,14 +8,12 @@ from time import sleep
 import os
 
 c = (
-        '\033[31m', # red
-        '\033[32m', # green
-        '\033[33m', # orange
-        '\033[34m', # blue
-        '\033[35m', # purple
-        '\033[93m', # yellow
-        '\033[95m', # pink
-        '\033[0m'   # reset
+        '\033[97m', # 0 - white
+        '\033[92m', # 1 - green
+        '\033[96m', # 2 - cyan
+        '\033[35m', # 3 - magenta
+        '\033[93m', # 4 - yellow
+        '\033[31m'  # 5 - pink
 )
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -24,23 +22,22 @@ def title(txt, cor=0):
     tmh = len(txt) + 4
     print(c[cor], end='')
     print(f'\n            {txt.center(tmh, " ")}\n')
-    print(c[7], end='')
+    print(c[0], end='')
     sleep(1)
 clear()
-def helpDesk(comm):
-    title(f'Acessando o manual do comando \' {comm} \'', 5)
-    print(c[3], end='')
-    help(comm)
-    print(c[4], end='')
+def helpDesk(prompt):
+    title(f'Acessando o manual do comando \' {prompt} \'', 4)
+    print(c[2], end='')
+    help(prompt)
+    print(c[5], end='')
     sleep(2)
 clear()
 cmd = ''
 while True:
-    print
-    title('Sistema de ajuda', 2)
+    title('Sistema de ajuda', 1)
     cmd = str(input('Função ou Biblioteca: '))
     if cmd.upper() == 'SAIR':
         break
     else:
         helpDesk(cmd)
-title('Até breve', 1)
+title('Até breve', 5)
