@@ -1,10 +1,10 @@
-def aumentar(preco, tx):
-    pValor = preco * (tx/100)
-    return preco + pValor
+def aumento(preco, tx):
+    calc = preco + (preco * tx/100)
+    return calc
 
 def diminuir(preco, tx):
-    pValor = preco * (tx/100)
-    return preco - pValor
+    calc = preco - (preco * tx/100)
+    return calc
 
 def dobro(preco):
     return preco * 2
