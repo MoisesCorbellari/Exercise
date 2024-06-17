@@ -2,7 +2,12 @@ import moeda
 
 moeda.title('Analise de valor\n')
 
-p = float(input('Digite um valor: R$'))
+while True:
+    try:
+        p = float(input('Digite um valor: R$'))
+        break
+    except ValueError:
+        print('\033[31mEntrada inválido! Digite um número.\033[0m\n')
 while True:
     try:
         taxa = float(input('Informe a taxa (em porcentagem " % "): '))
