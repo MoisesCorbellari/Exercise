@@ -4,7 +4,7 @@ def aumento(preco=0, taxa=0, formatar=False):
 
     :param preco - valor inicial do preço
     :param taxa - taxa de aumento em porcentagem
-    :param formato - se True, retorna o valor formatado como moeda
+    :param formatar - se True, retorna o valor formatado como moeda
     :return - valor com aumento aplicado, formatado ou não
     """
     calc = preco + (preco * taxa/100)
@@ -16,7 +16,7 @@ def diminuir(preco=0, taxa=0, formatar=False):
 
     :param preco - valor inicial do preço
     :param taxa - taxa de diminuição em porcentagem
-    :param formato - se True, retorna o valor formatado como moeda
+    :param formatar - se True, retorna o valor formatado como moeda
     :return - valor com a diminuição aplicada, formatado ou não
     """
     calc = preco - (preco * taxa/100)
@@ -27,7 +27,7 @@ def dobro(preco=0, formatar=False):
     Calcula o dobro de um preço.
 
     :param preco - valor inicial do preço.
-    :param formato - se True, retorna o valor formatado como moeda.
+    :param formatar - se True, retorna o valor formatado como moeda.
     :return - o dobro do valor, formatado ou não.
     """
     calc = preco * 2
@@ -38,7 +38,7 @@ def metade(preco=0, formatar=False):
     Calcula a metade de um preço.
 
     :param preco - valor inicial do preço.
-    :param formato - se True, retorna o valor formatado como moeda.
+    :param formatar - se True, retorna o valor formatado como moeda.
     :return - a metade do valor, formatado ou não.
     """
     calc = preco / 2
