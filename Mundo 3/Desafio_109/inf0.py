@@ -20,7 +20,7 @@ while True:
 print()
 moeda.title(f'Valor analisado: {moeda.coin(p)}\n')
 
-print(f'-> O dobro de {moeda.coin(p)} é {moeda.dobro(p, True)}')
-print(f'-> A metade de {moeda.coin(p)}, é {moeda.metade(p, True)}')
-print(f'-> Com aumento de {moeda.tx(taxa)} sobre o valor de {moeda.coin(p)}, fica em {moeda.aumento(p, taxa, True)}')
-print(f'-> Com a diminuição de {moeda.tx(taxa)} sobre o valor de {moeda.coin(p)}, fica em {moeda.diminuir(p, taxa, True)}\n')
+print(f'-> O dobro de {moeda.coin(p)} é {moeda.dobro(p, True)}.')
+print(f'-> A metade de {moeda.coin(p)}, é {moeda.metade(p, True)}.')
+print(f'-> Com aumento de {moeda.tx(taxa)} sobre o valor de {moeda.coin(p)}, fica em {moeda.aumento(p, taxa, True)}.')
+print(f'-> Com a diminuição de {moeda.tx(taxa)} sobre o valor de {moeda.coin(p)}, fica em {moeda.diminuir(p, taxa, True)}.\n')
