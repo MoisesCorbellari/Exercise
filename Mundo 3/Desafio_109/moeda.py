@@ -1,4 +1,4 @@
-def aumento(preco=0, taxa=0, formato=False):
+def aumento(preco=0, taxa=0, formatar=False):
     """
     Calcula o aumento de um preço com base em uma taxa percentual.
 
@@ -8,9 +8,9 @@ def aumento(preco=0, taxa=0, formato=False):
     :return - valor com aumento aplicado, formatado ou não
     """
     calc = preco + (preco * taxa/100)
-    return calc if not formato else coin(calc)
+    return calc if not formatar else coin(calc)
 
-def diminuir(preco=0, taxa=0, formato=False):
+def diminuir(preco=0, taxa=0, formatar=False):
     """
     Calcula a diminuição de um preço com base em uma taxa percentual.
 
@@ -20,9 +20,9 @@ def diminuir(preco=0, taxa=0, formato=False):
     :return - valor com a diminuição aplicada, formatado ou não
     """
     calc = preco - (preco * taxa/100)
-    return calc if not formato else coin(calc)
+    return calc if not formatar else coin(calc)
 
-def dobro(preco=0, formato=False):
+def dobro(preco=0, formatar=False):
     """
     Calcula o dobro de um preço.
 
@@ -31,9 +31,9 @@ def dobro(preco=0, formato=False):
     :return - o dobro do valor, formatado ou não.
     """
     calc = preco * 2
-    return calc if not formato else coin(calc)
+    return calc if not formatar else coin(calc)
 
-def metade(preco=0, formato=False):
+def metade(preco=0, formatar=False):
     """
     Calcula a metade de um preço.
 
@@ -42,7 +42,7 @@ def metade(preco=0, formato=False):
     :return - a metade do valor, formatado ou não.
     """
     calc = preco / 2
-    return calc if not formato else coin(calc)
+    return calc if not formatar else coin(calc)
 
 def coin(preco=0, coin='R$'):
     """
@@ -63,10 +63,10 @@ def tx(taxa=0):
     """
     return f'{taxa:.2f}%'.replace('.', ',')
 
-def title(txt):
+def title(txt, larg=70):
     """
     Imprime um título centralizado.
 
     :param txt: texto do título
     """
-    print(f'{txt:^70}')
+    print(f'{txt:^{larg}}')
