@@ -3,13 +3,13 @@ Adicione o módulo moeda.py criado nos desafios anteriores, uma função chamada
 
 ## Funcionalidades do desafio
 ### Módulo moeda.py:
-- aumento(preco, taxa): aumenta o preço pela taxa percentual fornecida.
-- diminuir(preco, taxa): diminui o preço pela taxa percentual fornecida.
-- dobro(preco): retorna o dobro do valor informado.
-- metade(preco): retorna a metade do valor informado.
-- coin(preco, coin='R$'): formata o preço como uma string monetária brasileira.
-- tx(taxa): formata a taxa como uma string percentual brasileira.
-- title(txt, larg=70): imprime um título centralizado com tamanho de largura fixa.
+- aumento(preco=0, taxa=0): aumenta o preço pela taxa percentual fornecida.
+- diminuir(preco=0, taxa=0): diminui o preço pela taxa percentual fornecida.
+- dobro(preco=0): retorna o dobro do valor informado.
+- metade(preco=0): retorna a metade do valor informado.
+- coin(preco=0, coin='R$'): retorna o preço formatado.
+- tx(taxa=0): retorna a taxa formatada.
+- title(txt, larg=70): imprime um título centralizado com tamanho da largura fixa.
 
 ### Programa info.py:
 - importa o módulo "moeda".
