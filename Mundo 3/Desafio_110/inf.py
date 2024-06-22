@@ -3,7 +3,7 @@ import moeda
 moeda.title('Analisando valores\n')
 while True:
     try:
-        p = float(input('Digite o preço: R$'))
+        p = float(input('Digite um valor: R$'))
         break
     except ValueError:
         print('\033[31mEntrada inválida! Informe um valor\033[0m\n')
