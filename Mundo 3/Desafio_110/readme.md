@@ -10,14 +10,15 @@ Adicione o módulo moeda.py criado nos desafios anteriores, uma função chamada
 - coin(preco=0, coin='R$'): retorna o preço formatado.
 - tx(taxa=0): retorna a taxa formatada.
 - title(txt, larg=70): imprime um título centralizado com tamanho da largura fixa.
+- resumo(preco=0, taxa=0): exibe um resumo dos cálculos feitos com o valor e a taxa fornecidos.
 
 ### Programa info.py:
 - importa o módulo "moeda".
 - solicita ao usuário um valor monetário e uma taxa percentual.
 - valida as entradas para garantir que sejam números válidos e que a taxa não seja negativa.
 - exibe o valor original, o dobro, a metade, o valor aumentado e o valor diminuído, utilizando as funções do módulo "moeda.py".
-- usa cores para indicar entradas inválidas. Por exemplo, se o usuário inserir uma taxa negativa, a mensagem de erro será exibida em vermelho.
+- usa cores para indicar entradas inválidas. por exemplo, se o usuário inserir uma taxa negativa, a mensagem de erro será exibida em vermelho.
 
 ### Estrutura do desafio
-- moeda.py: Contém as funções aumento(), diminuir(), dobro(), metade(), coin(), tx() e title().
-- info.py: Programa principal que importa o módulo moeda e utiliza suas funções. Também inclui validação de entrada e uso de cores para indicar erros.
+- moeda.py: contém as funções aumento(), diminuir(), dobro(), metade(), coin(), tx(), title() e resumo().
+- info.py: programa principal que importa o módulo "moeda.py" e utiliza suas funções, também inclui validação de entrada e uso de cores para indicar erros.
