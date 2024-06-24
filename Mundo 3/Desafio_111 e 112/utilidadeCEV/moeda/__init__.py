@@ -27,7 +27,7 @@ def title(txt, larg=70):
 def resumo(preco=0, taxa=0):
     print()
     title('Resumo da análise\n')
-    print(f'Preço analisado: \t{coin(preco)}')
+    print(f'Valor analisado: \t{coin(preco)}')
     print(f'Taxa informada: \t{tx(taxa)}\n')
     print(f'Dobro do preço: \t{dobro(preco, True)}')
     print(f'Metade do preço: \t{metade(preco, True)}')
