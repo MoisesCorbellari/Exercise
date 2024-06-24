@@ -15,7 +15,7 @@ def metade(preco=0, formato=False):
     return calc if not formato else coin(calc)
 
 def coin(preco=0, coin='R$'):
-    return f'{coin}{preco:,.2f}'.replace('.', '#').replace(',', '.').replace('#', ',')
+    return f'{coin}{preco:.2f}'.replace('.', '#').replace(',', '.').replace('#', ',')
 
 def tx(taxa=0):
     return f'{taxa:.2f}%'.replace('.', ',')
