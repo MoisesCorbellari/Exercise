@@ -1,7 +1,3 @@
-# Criando um mini sistema
-Mini sistema modularizado que permite cadastrar pessoas pelo nome e idade
-em um arquivo de texto simples. O programa tem somente 2 opções: Cadastrar e Visualizar Cadastro.
-
 ## Funcionalidades - libs
 ### archive:
 - clear(): limpa a tela do terminal.
