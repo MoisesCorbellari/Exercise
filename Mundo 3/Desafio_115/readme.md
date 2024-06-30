@@ -1,5 +1,5 @@
-## Funcionalidades - libs
-### archive:
+# Funcionalidades - libs
+## archive:
 - clear(): limpa a tela do terminal.
 
 - existe(doc): verifica se um arquivo existe no diretório atual.
@@ -10,7 +10,7 @@
 
 - cadastrar(arq, nome='desconhecido', idade=0): adiciona uma nova linha de dados no formato "nome - idade" ao final de um arquivo de texto existente.
 
-### screen:
+## screen:
 - leiaInt(prompt): solicita ao usuário um número inteiro a partir do prompt fornecido. Lida com exceções como valores inválidos e interrupções do teclado.
 
 - linha(larg=70): retorna uma linha de caracteres '-' com o comprimento especificado (padrão é 70 caracteres).
